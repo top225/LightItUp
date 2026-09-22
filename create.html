@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightItUp - Create Video</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111111;
+            color: white;
+            padding: 25px;
+        }
+
+        .page {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #bbbbbb;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #444444;
+            background: #222222;
+            color: white;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .generate {
+            width: 100%;
+            margin-top: 30px;
+            padding: 16px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #111111;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <h1>🔥 Create Your Video</h1>
+
+    <p class="description">
+        Tell LightItUp what video you want to create.
+    </p>
+
+    <label>Describe your video</label>
+
+    <textarea id="prompt"
+        placeholder="Example: Create a motivational video about never giving up.">
+    </textarea>
+
+    <label>Video Duration</label>
+
+    <select id="duration">
+        <option>30 seconds</option>
+        <option>60 seconds</option>
+        <option>90 seconds</option>
+    </select>
+
+    <label>Video Style</label>
+
+    <select id="style">
+        <option>Motivational</option>
+        <option>Educational</option>
+        <option>Story</option>
+        <option>Business</option>
+        <option>Social Media</option>
+    </select>
+
+    <label>Voice</label>
+
+    <select id="voice">
+        <option>Female</option>
+        <option>Male</option>
+    </select>
+
+    <button class="generate" onclick="generateVideo()">
+        🔥 Generate Video
+    </button>
+
+</div>
+
+<script>
+
+function generateVideo() {
+
+    const prompt = document.getElementById("prompt").value;
+
+    if (prompt.trim() === "") {
+        alert("Please describe the video you want to create.");
+        return;
+    }
+
+    alert("LightItUp received your idea! AI video generation will be connected next.");
+
+}
+
+</script>
+
+</body>
+</html>
